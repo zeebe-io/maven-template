@@ -18,3 +18,4 @@ Change the artifact, name and version in `pom.xml` and `.ci/scripts/github-relea
 * Jenkinsfile
   * Rerun failed builds
   * Show last commit in build display name
+  * Archie test reports and JVM dumpfiles in case of failure

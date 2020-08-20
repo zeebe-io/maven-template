@@ -67,6 +67,10 @@ pipeline {
         always {
             junit testResults: "target/surefire-reports/TEST-*.xml", keepLongStdio: true
         }
+        failure {
+            zip zipFile: 'test-reports.zip', archive: true, glob: "**/*/surefire-reports/**"
+            archive "**/hs_err_*.log"
+        }        
       }
     }
 
