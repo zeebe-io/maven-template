@@ -17,3 +17,4 @@ Change the artifact, name and version in `pom.xml` and `.ci/scripts/github-relea
   * Surefire Plugin
 * Jenkinsfile
   * Rerun failed builds
+  * Show last commit in build display name
