@@ -58,7 +58,7 @@ pipeline {
       steps {
         container('maven') {
           configFileProvider([configFile(fileId: 'maven-nexus-settings-zeebe', variable: 'MAVEN_SETTINGS_XML')]) {
-            sh 'mvn install -B -s $MAVEN_SETTINGS_XML'
+            sh 'mvn install -B -s $MAVEN_SETTINGS_XML -Dsurefire.rerunFailingTestsCount=5'
           }
         }
       }

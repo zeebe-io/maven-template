@@ -16,8 +16,10 @@ Change the artifact, name and version in `pom.xml` and `.ci/scripts/github-relea
   * AssertJ
   * Surefire Plugin
   * JaCoCo Plugin (test coverage)
+  * flaky test extractor
 * Jenkinsfile
   * Rerun failed builds
   * Show last commit in build display name
   * Archie test reports and JVM dump files in case of failure
   * Publish test coverage to Jenkins and also archive test coverae reports as part of the build artifact
+  * Detect flaky tests and publish them to Jenkins
