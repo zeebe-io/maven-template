@@ -15,7 +15,9 @@ Change the artifact, name and version in `pom.xml` and `.ci/scripts/github-relea
   * JUnit 4
   * AssertJ
   * Surefire Plugin
+  * JaCoCo Plugin (test coverage)
 * Jenkinsfile
   * Rerun failed builds
   * Show last commit in build display name
-  * Archie test reports and JVM dumpfiles in case of failure
+  * Archie test reports and JVM dump files in case of failure
+  * Publish test coverage to Jenkins and also archive test coverae reports as part of the build artifact
