@@ -12,7 +12,7 @@ Change the artifact, name and version in `pom.xml` and `.ci/scripts/github-relea
 * Maven POM
   * Zeebe reprositories
   * Release to Maven, Zeebe and GitHub
-  * JUnit 4
+  * JUnit 5
   * AssertJ
   * Surefire Plugin
   * JaCoCo Plugin (test coverage)

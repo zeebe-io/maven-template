@@ -39,29 +39,29 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.java>8</version.java>
 		<maven.version>3.0</maven.version>
-		<surefire.version>3.0.0-M5</surefire.version>
+		
 		<nexus.snapshot.repository>https://app.camunda.com/nexus/content/repositories/zeebe-io-snapshots/</nexus.snapshot.repository>
 		<nexus.release.repository>https://app.camunda.com/nexus/content/repositories/zeebe-io/</nexus.release.repository>
 
+		<version.junit>5.6.2</version.junit>
+
+		<plugin.version.surefire>3.0.0-M5</plugin.version.surefire>
 		<plugin.version.jacoco>0.8.5</plugin.version.jacoco>
 	</properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.maven.surefire</groupId>
-			<artifactId>maven-surefire-common</artifactId>
-			<version>${surefire.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.surefire</groupId>
-			<artifactId>surefire-api</artifactId>
-			<version>${surefire.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.surefire</groupId>
-			<artifactId>surefire-shared-utils</artifactId>
-			<version>3.0.0-M4</version>
-		</dependency>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>${version.junit}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>	
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
@@ -69,9 +69,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -103,7 +102,8 @@
 					<source>8</source>
 				</configuration>
 			</plugin>
-			
+
+
 			<!-- JaCoCo Plugin -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
@@ -125,7 +125,13 @@
 					</execution>
 					<!-- Threshold -->
 				</executions>
-			</plugin>
+			</plugin>			
+			 <!--  Surefire plugin -->
+			 <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${plugin.version.surefire}</version>
+            </plugin>
 		</plugins>
 	</build>
 
