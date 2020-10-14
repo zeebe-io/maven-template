@@ -14,6 +14,7 @@ Adding [Contributing to this project](https://gist.github.com/jwulf/2c7f772570bf
 ## Features
 * GitHub Integration
   * Dependabot enabled for Maven dependencies (see `.github/dependabot`) 
+  * BORS config (configured to require no review approvals; edit `bors.toml/required_approvals` to change this)
 * Maven POM
   * Zeebe reprositories
   * Release to Maven, Zeebe and GitHub
@@ -28,3 +29,5 @@ Adding [Contributing to this project](https://gist.github.com/jwulf/2c7f772570bf
   * Archie test reports and JVM dump files in case of failure
   * Publish test coverage to Jenkins and also archive test coverae reports as part of the build artifact
   * Detect flaky tests and publish them to Jenkins
+  
+  
