@@ -15,6 +15,7 @@ Adding [Contributing to this project](https://gist.github.com/jwulf/2c7f772570bf
 * GitHub Integration
   * Dependabot enabled for Maven dependencies (see `.github/dependabot`) 
   * BORS config (configured to require no review approvals; edit `bors.toml/required_approvals` to change this)
+  * LGTM config
 * Maven POM
   * Zeebe reprositories
   * Release to Maven, Zeebe and GitHub
@@ -31,3 +32,7 @@ Adding [Contributing to this project](https://gist.github.com/jwulf/2c7f772570bf
   * Detect flaky tests and publish them to Jenkins
   
   
+## Versions
+Different versions are represented in different branches
+ * `master` - Java 11  
+ * `stable/java8` - Java 8
