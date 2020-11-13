@@ -23,6 +23,7 @@ Adding [Contributing to this project](https://gist.github.com/jwulf/2c7f772570bf
 - Maven POM
   - Zeebe reprositories
   - Release to Maven, Zeebe and GitHub
+  - Google Code Formatter  
   - JUnit 5
   - AssertJ
   - Surefire Plugin
