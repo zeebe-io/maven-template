@@ -13,7 +13,7 @@
 
   <name>give-me-a-name</name>
 
-  <!-- When changing the artifact or name, also make sure to change the SCM 
+  <!-- When changing the artifact or name, also make sure to change the SCM
     location below and in .ci/scripts/github-release.sh -->
 
   <scm>
@@ -38,7 +38,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <version.java>11</version.java>
-    <maven.version>3.0</maven.version>
+    <maven.version>3.6.2</maven.version>
 
     <nexus.snapshot.repository>https://app.camunda.com/nexus/content/repositories/zeebe-io-snapshots/</nexus.snapshot.repository>
     <nexus.release.repository>https://app.camunda.com/nexus/content/repositories/zeebe-io/</nexus.release.repository>
